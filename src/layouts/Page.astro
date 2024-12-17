@@ -1,0 +1,109 @@
+---
+interface Props {
+	head: string;
+}
+
+const { head } = Astro.props;
+
+---
+
+<script>
+      const navLinkEls = document.querySelectorAll('.option');
+      const windowPahtname = window.location.pathname;
+
+      navLinkEls.forEach((navLinkEl) => {
+        if (navLinkEl.href.includes(windowPahtname)) {
+          navLinkEl.classList.add('active');
+        }
+      });
+</script>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Protfolio</title>
+	</head>
+	<body>
+		<div class="container text-center">
+			<div class="row">
+			  <div class="col-3 menu">
+				<img src="../src/assets/img/profile.jpg" class="thumbnail">
+          <nav>
+            <ul class="nav-box">
+              <p class="margin"><a class="option" href="/">Home</a></p>
+              <p class="margin"><a class="option" href="/about">About Me</a></p>
+              <p class="margin"><a class="option" href="/resume">Resume</a></p>
+              <p class="margin"><a class="option" href="/portfolio">Portfolio</a></p>
+              <p class="margin"><a class="option" href="/testimonials">Testimonials</a></p>
+              <p class="margin"><a class="option" href="/contact">Contact</a></p>
+            </ul>
+          </nav>
+			  </div>
+			  <div class="col board">
+				<div class="container">
+					<h1 class="head">{head}</h1>
+					<slot />
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+  .menu {
+        background-color: #F0DFAD;
+        color: white;
+		height: 980px;
+    }
+
+    .board {
+        background-color: #f7f7f7;
+        height: 980px;
+        padding: 0 40px 0 40px;
+    }
+
+    .thumbnail {
+		align-self: start;
+        width: 320px;
+        height: 320px;
+		position: relative;
+    }
+
+    .head {
+        font-size: 70px;
+        font-weight: bold;
+        color: #54494B;
+        padding: 75px 0 25px 0;
+    }
+
+    .option {
+        font-size: 20px;
+        font-weight: bold;
+        color: #54494B;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+    }
+
+    .nav-box {
+      margin: 75px 0 0 0;
+    }
+
+    .margin {
+        margin: 0 20px 50px 0;
+    }
+
+    .active {
+        color: #000000;
+    }
+</style>

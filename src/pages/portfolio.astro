@@ -1,0 +1,60 @@
+---
+import Page from '../layouts/Page.astro'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../assets/style.css';
+---
+
+<script>
+    const navLinks = document.querySelectorAll('.option');
+    const windowPathname = window.location.pathname;
+
+    navLinks.forEach((navLink) => {
+        if (navLink.href.includes(windowPathname)) {
+            navLink.classList.add('active');
+        }
+    });
+</script>
+
+
+<Page head="PORTFOLIO">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <headline>
+                        <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center">
+                          <li class="margin"><a href="/all" class="option">All</a></li>
+                          <li class="margin"><a href="/blender" class="option">Blender</a></li>
+                          <li class="margin"><a href="/graphic-design" class="option">Graphic Design</a></li>
+                          <li class="margin"><a href="/website" class="option">Website</a></li>
+                        </ul>
+                      </div>
+                </headline>
+            </div>
+        </div>
+    </div>
+</Page>
+
+<style>
+    .option {
+        font-size: 20px;
+        font-weight: bold;
+        color: #54494B;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .option:hover {
+        color: #F0DFAD;
+        transform:scale(1.1);
+    }
+
+    .margin {
+        margin: 0 40px 0 40px;
+    }
+
+    .active {
+        color: #F0DFAD;
+    }
+</style>

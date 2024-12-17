@@ -1,0 +1,54 @@
+---
+import Page from '../layouts/Page.astro'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../assets/style.css';
+---
+
+<Page head="RESUME">
+    <div class="container">
+        <div class="row">
+            <div class="col line">
+                <headline>
+                    EDUCATION
+                </headline>
+                <div class="conntainer">
+                    <h4 class="box">Elementery School</h4>
+                    <p class="text-start info">I studies in Elementery</p>
+                </div>
+                <div class="conntainer">
+                    <h4 class="box">High School</h4>
+                    <p class="text-start info">I studies in High School</p>
+                </div>
+                <div class="conntainer">
+                    <h4 class="box">College</h4>
+                    <p class="text-start info">I studies in University</p>
+                </div>
+            </div>
+            <div class="col">
+                <headline>
+                    EXPERIENCE
+                </headline>
+            </div>
+        </div>
+    </div>
+</Page>
+
+<style>
+    .line {
+        border-inline-end: 2px solid #002500;
+    }
+
+    .box {
+        background-color: #F0DFAD;
+        border-radius: 5px;
+        color: #54494B;
+        font-weight: bold;
+        margin: 50px 0 0 0;
+    }
+
+    .info {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+</style>
