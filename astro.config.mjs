@@ -1,6 +1,9 @@
-import { defineConfig } from 'astro/config'
-
-export default defineConfig({
-  site: 'https://inky3.github.io',
-  base: 'portfolio',
-})
+export default {
+  site: "https://github.com/inky3/portfolio", // Use your actual GitHub Pages URL
+  build: {
+    outDir: "./dist",
+  },
+  vite: {
+    base: "/portfolio/",  // The subpath of your repository, if applicable
+  },
+};

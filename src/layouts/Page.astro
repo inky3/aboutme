@@ -31,7 +31,7 @@ const { head } = Astro.props;
 		<div class="container text-center">
 			<div class="row">
 			  <div class="col-3 menu">
-				<img src="../src/assets/img/profile.jpg" class="thumbnail">
+				<img src="public/assets/img/profile.png" class="thumbnail">
           <nav>
             <ul class="nav-box">
               <p class="margin"><a class="option" href="/">Home</a></p>
@@ -74,10 +74,12 @@ const { head } = Astro.props;
     }
 
     .thumbnail {
-		align-self: start;
-        width: 320px;
-        height: 320px;
-		position: relative;
+		    align-self: start;
+        width: 322px;
+        height: 322px;
+        display: block;
+        position: relative;
+        right: 6px;
     }
 
     .head {
@@ -91,7 +93,7 @@ const { head } = Astro.props;
         font-size: 20px;
         font-weight: bold;
         color: #54494B;
-        padding: 0 0 0 10px;
+        justify-content: center;
         text-decoration: none;
     }
 
