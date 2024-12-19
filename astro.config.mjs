@@ -1,5 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  base: '/portfolio/', // Astro adjusts all paths for you
-});
+  site: 'https://github.com/inky3/me.git',
+  base: '/me/',
+})
