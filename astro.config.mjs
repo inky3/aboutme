@@ -1,6 +1,6 @@
 export default {
-  site: 'https://name.github.io', // Replace 'name' with your GitHub username
+  site: 'https://inky3.github.io', // Your GitHub username
   build: {
-    base: '/me/', // Replace 'repo-name' with your repository name
+    // Remove the base path for now
   },
 };
