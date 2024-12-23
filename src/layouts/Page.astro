@@ -34,7 +34,7 @@ const { head } = Astro.props;
 			<div class="row canvas">
 
 
-        <div class="col phone-menu">
+        <div class="text-start phone-menu">
           <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list" style="font-size: 3rem";></i></button>
 
               <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -42,7 +42,7 @@ const { head } = Astro.props;
                   <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">My Information</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body phone">
+                <div class="offcanvas-body phone text-center">
                   <p><ul class="nav-box">
                     <p class="margin"><a class="option" href="../">Home</a></p>
                     <p class="margin"><a class="option" href="../about">About Me</a></p>
@@ -124,7 +124,8 @@ const { head } = Astro.props;
         font-size: 70px;
         font-weight: bold;
         color: #54494B;
-        padding: 75px 0 25px 0;
+        padding-top:  75px;
+        justify-content: center;
     }
 
     .option {
@@ -160,6 +161,10 @@ const { head } = Astro.props;
 
     .canvas {
       background-color: #f7f7f7;
+    }
+
+    .btn {
+      justify-content: start;
     }
 
     @media (max-width: 1024px) {
