@@ -1,0 +1,33 @@
+---
+interface Props {
+  name: string;
+  level: string;
+}
+
+const { name, level } = Astro.props;
+---
+
+<div class="container skill">
+  <div class="row align-items-start">
+    <div class="col text-end mid-line">
+      {name}
+    </div>
+    <div class="col text-start">
+      {level}
+    </div>
+  </div>
+</div>
+
+<style>
+  .skill {
+    font-size: 20px;
+    font-weight: Bold;
+    color: #54494B;
+    align-items: start;
+  }
+
+  .mid-line {
+    border-right: 3px solid #54494B;
+    width: auto;
+  }
+</style>
