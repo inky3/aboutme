@@ -56,3 +56,52 @@ headline {
     font-weight: bold;
     color: #54494B;
 }
+
+.up-1 {
+    display: inline-block;
+
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.up-2 {
+    display: inline-block;
+
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.up-3 {
+    display: inline-block;
+
+    animation: fadeInUp;
+    animation-duration: 4s; 
+}
+
+.up-4 {
+    display: inline-block;
+
+    animation: fadeInUp;
+    animation-duration: 4s; 
+}
+
+.up-5 {
+    display: inline-block;
+
+    animation: fadeInUp;
+    animation-duration: 5s; 
+}
+
+.right-1 {
+    display: inline-block;
+
+    animation: fadeInRight;
+    animation-duration: 1s; 
+}
+
+.left-1 {
+    display: inline-block;
+
+    animation: fadeInLeft;
+    animation-duration: 1s; 
+}

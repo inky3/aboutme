@@ -9,10 +9,10 @@ const { name, level } = Astro.props;
 
 <div class="container skill">
   <div class="row align-items-start">
-    <div class="col text-end mid-line">
+    <div class="col text-end mid-line up-2">
       {name}
     </div>
-    <div class="col text-start">
+    <div class="col text-start up-2">
       {level}
     </div>
   </div>
@@ -23,11 +23,16 @@ const { name, level } = Astro.props;
     font-size: 20px;
     font-weight: Bold;
     color: #54494B;
-    align-items: start;
   }
 
   .mid-line {
     border-right: 3px solid #54494B;
     width: auto;
   }
+  .up-4 {
+      display: inline-block;
+
+      animation: fadeInUp;
+      animation-duration: 4s; 
+    }
 </style>
